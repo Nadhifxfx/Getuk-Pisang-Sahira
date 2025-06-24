@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getuk Pisang Sahira - Manisnya Pisang, Tradisi yang Tak Pernah Padam</title>
+    <meta name="description" content="Getuk Pisang Sahira - Oleh-oleh khas Oro-Oro Ombo, Batu, Malang. Bebas pengawet, fresh, dan halal. Pesan sekarang via WhatsApp!">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍌</text></svg>">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'banana-green': '#8BC34A',
+                        'traditional-yellow': '#FFEB3B',
+                        'leaf-brown': '#795548',
+                        'warm-cream': '#FFF8E1'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'lora': ['Lora', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                  
+                    <span class="font-lora font-semibold text-lg sm:text-xl text-leaf-brown">Getuk Pisang Sahira</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-banana-green transition-colors text-sm lg:text-base">Beranda</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-banana-green transition-colors text-sm lg:text-base">Tentang</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-banana-green transition-colors text-sm lg:text-base">Produk</a>
+                    <a href="#location" class="nav-link text-gray-700 hover:text-banana-green transition-colors text-sm lg:text-base">Lokasi</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-banana-green transition-colors text-sm lg:text-base">Kontak</a>
+                    <a href="#products" class="bg-banana-green text-white px-4 lg:px-6 py-2 rounded-full hover:bg-green-600 transition-all transform hover:scale-105 text-sm lg:text-base">Pesan Sekarang</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden focus:outline-none p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="#home" class="block px-3 py-3 text-gray-700 hover:text-banana-green transition-colors">Beranda</a>
+                    <a href="#about" class="block px-3 py-3 text-gray-700 hover:text-banana-green transition-colors">Tentang</a>
+                    <a href="#products" class="block px-3 py-3 text-gray-700 hover:text-banana-green transition-colors">Produk</a>
+                    <a href="#location" class="block px-3 py-3 text-gray-700 hover:text-banana-green transition-colors">Lokasi</a>
+                    <a href="#contact" class="block px-3 py-3 text-gray-700 hover:text-banana-green transition-colors">Kontak</a>
+                    <a href="#products" class="block mx-3 mt-4 mb-2 bg-banana-green text-white px-6 py-3 rounded-full text-center hover:bg-green-600 transition-all">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen bg-gradient-to-br from-warm-cream to-traditional-yellow flex items-center pt-16">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="text-center lg:text-left order-2 lg:order-1" data-aos="fade-right">
+                    <h1 class="font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-leaf-brown mb-4 lg:mb-6 leading-tight">
+                        Manisnya Pisang,<br>
+                        <span class="text-banana-green">Tradisi yang Tak Pernah Padam</span>
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-700 mb-6 lg:mb-8 leading-relaxed px-2 lg:px-0">
+                        Nikmati kelezatan getuk pisang asli Kediri, Dibuat dengan resep turun temurun, 
+                        bebas pengawet, dan selalu fresh untuk keluarga Indonesia. 
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start mb-6 lg:mb-8 px-4 sm:px-0">
+                        <a href="#products" class="bg-banana-green text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg">
+                             Pesan Sekarang
+                        </a>
+                        <a href="#about" class="border-2 border-leaf-brown text-leaf-brown px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:bg-leaf-brown hover:text-white transition-all transform hover:scale-105">
+                             Tentang Kami
+                        </a>
+                    </div>
+                    
+                    <!-- Highlight Features -->
+                    <div class="flex flex-wrap gap-3 lg:gap-6 justify-center lg:justify-start px-4 sm:px-0">
+                        <div class="flex items-center space-x-2 bg-white/80 px-3 lg:px-4 py-2 rounded-full">
+                            <span class="text-green-500">✅</span>
+                            <span class="text-xs sm:text-sm font-medium">Bebas Pengawet</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/80 px-3 lg:px-4 py-2 rounded-full">
+                            <span class="text-green-500">✅</span>
+                            <span class="text-xs sm:text-sm font-medium">Fresh Daily</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/80 px-3 lg:px-4 py-2 rounded-full">
+                            <span class="text-green-500">✅</span>
+                            <span class="text-xs sm:text-sm font-medium">Halal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative order-1 lg:order-2 mb-8 lg:mb-0" data-aos="fade-left">
+                    <div class="relative z-10">
+                        <img src="img/Getuk Pisang.jpeg" 
+                             alt="Getuk Pisang Sahira" 
+                             class="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-2 -right-2 lg:-top-4 lg:-right-4 w-12 h-12 lg:w-20 lg:h-20 bg-traditional-yellow rounded-full opacity-70 animate-bounce"></div>
+                    <div class="absolute -bottom-3 -left-3 lg:-bottom-6 lg:-left-6 w-10 h-10 lg:w-16 lg:h-16 bg-banana-green rounded-full opacity-70 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-5 h-5 lg:w-6 lg:h-6 text-leaf-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 lg:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 lg:mb-16" data-aos="fade-up">
+                <h2 class="font-lora text-2xl sm:text-3xl lg:text-4xl font-bold text-leaf-brown mb-4 lg:mb-6">Tentang Getuk Pisang Sahira</h2>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 lg:px-0">
+                 Oleh-oleh khas Kediri - Berbahan dasar pisang - Di produksi di Kota Wisata Batu - Tersedia per-pcs maupun pack
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div data-aos="fade-right" class="px-4 lg:px-0">
+                    <h3 class="font-lora text-xl sm:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6">Cerita di Balik Kelezatan</h3>
+                    <div class="space-y-4 text-gray-700 leading-relaxed text-sm sm:text-base">
+                        <p>
+                            🍌 <strong>Resep Turun Temurun:</strong> Dibuat dengan resep yang telah diwariskan secara turun temurun, 
+                            menggunakan pisang raja pilihan terbaik dari kebun lokal Batu.
+                        </p>
+                        <p>
+                            🌿 <strong>Bahan Alami:</strong> Tanpa pengawet buatan, menggunakan gula aren asli dan santan segar 
+                            untuk menciptakan tekstur yang lembut dan rasa yang autentik.
+                        </p>
+                        <p>
+                            👨‍🍳 <strong>Proses Handmade:</strong> Setiap getuk dibuat dengan tangan oleh pengrajin berpengalaman, 
+                            menjamin kualitas dan kelezatan di setiap gigitan.
+                        </p>
+                        <p>
+                            🏆 <strong>Kebanggaan Batu:</strong> Menjadi salah satu oleh-oleh khas yang wajib dibawa pulang 
+                            ketika berkunjung ke Kota Wisata Batu, Malang.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative px-4 lg:px-0" data-aos="fade-left">
+                    <!-- Image Gallery -->
+                    <div class="grid grid-cols-2 gap-3 lg:gap-4">
+                        <img src="https://images.pexels.com/photos/1121782/pexels-photo-1121782.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             alt="Proses pembuatan getuk pisang" 
+                             class="rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer gallery-image">
+                        <img src="https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             alt="Pisang raja segar" 
+                             class="rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer gallery-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             alt="Kemasan getuk pisang" 
+                             class="rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer gallery-image">
+                        <img src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             alt="Getuk pisang siap saji" 
+                             class="rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer gallery-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-12 lg:py-20 bg-gradient-to-br from-warm-cream to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 lg:mb-16" data-aos="fade-up">
+                <h2 class="font-lora text-2xl sm:text-3xl lg:text-4xl font-bold text-leaf-brown mb-4 lg:mb-6">Varian Produk Kami</h2>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4 lg:px-0">
+                    Pilih kemasan yang sesuai dengan kebutuhan Anda. Setiap kemasan dikemas dengan cinta dan kehigienisan terjaga.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 product-card mx-4 sm:mx-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-t-2xl">
+                        <img src="img/Menu 1.png" 
+                             alt="Kemasan Kecil Getuk Pisang" 
+                             class="w-full h-48 sm:h-56 lg:h-64 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-3 left-3">
+                        </div>
+                    </div>
+                    <div class="p-4 lg:p-6">
+                        <h3 class="font-lora text-lg lg:text-xl font-semibold text-leaf-brown mb-2">Kemasan Kecil</h3>
+                        <p class="text-gray-600 mb-3 lg:mb-4 text-sm lg:text-base">Perfect untuk mencoba atau sebagai camilan pribadi</p>
+                        <div class="flex items-center justify-between mb-3 lg:mb-4">
+                            <span class="text-xl lg:text-2xl font-bold text-banana-green">Rp 15.000</span>
+                            <span class="text-gray-500 text-sm lg:text-base">11 biji</span>
+                        </div>
+                        <ul class="text-xs lg:text-sm text-gray-600 mb-4 lg:mb-6 space-y-1">
+                            <li>✅ 11 potong getuk pisang</li>
+                            <li>✅ Kemasan food grade</li>
+                            <li>✅ Tahan 3-4 hari</li>
+                        </ul>
+                        <button onclick="orderWhatsApp('Kemasan Kecil', 25000, 10)" 
+                                class="w-full bg-banana-green text-white py-2.5 lg:py-3 rounded-full font-semibold hover:bg-green-600 transition-all transform hover:scale-105 text-sm lg:text-base">
+                            🛒 Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 product-card mx-4 sm:mx-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-t-2xl">
+                        <img src="img/Menu 1.png" 
+                             alt="Kemasan Sedang Getuk Pisang" 
+                             class="w-full h-48 sm:h-56 lg:h-64 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-3 left-3">
+                        </div>
+                    </div>
+                    <div class="p-4 lg:p-6">
+                        <h3 class="font-lora text-lg lg:text-xl font-semibold text-leaf-brown mb-2">Kemasan Sedang</h3>
+                        <p class="text-gray-600 mb-3 lg:mb-4 text-sm lg:text-base">Ideal untuk keluarga kecil atau berbagi dengan teman</p>
+                        <div class="flex items-center justify-between mb-3 lg:mb-4">
+                            <span class="text-xl lg:text-2xl font-bold text-banana-green">Rp 20.000</span>
+                            <span class="text-gray-500 text-sm lg:text-base">14 biji</span>
+                        </div>
+                        <ul class="text-xs lg:text-sm text-gray-600 mb-4 lg:mb-6 space-y-1">
+                            <li>✅ 14 potong getuk pisang</li>
+                            <li>✅ Kemasan premium</li>
+                            <li>✅ Tahan 4-5 hari</li>
+                        </ul>
+                        <button onclick="orderWhatsApp('Kemasan Sedang', 20000, 14)" 
+                                class="w-full bg-banana-green text-white py-2.5 lg:py-3 rounded-full font-semibold hover:bg-green-600 transition-all transform hover:scale-105 text-sm lg:text-base">
+                            🛒 Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 product-card mx-4 sm:mx-0 sm:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-t-2xl">
+                        <img src="img/Menu 1.png" 
+                             alt="Kemasan Besar Getuk Pisang" 
+                             class="w-full h-48 sm:h-56 lg:h-64 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-3 left-3">
+                   
+                        </div>
+                    </div>
+                    <div class="p-4 lg:p-6">
+                        <h3 class="font-lora text-lg lg:text-xl font-semibold text-leaf-brown mb-2">Kemasan Besar</h3>
+                        <p class="text-gray-600 mb-3 lg:mb-4 text-sm lg:text-base">Perfect untuk acara atau oleh-oleh dalam jumlah banyak</p>
+                        <div class="flex items-center justify-between mb-3 lg:mb-4">
+                            <span class="text-xl lg:text-2xl font-bold text-banana-green">Rp 25.000</span>
+                            <span class="text-gray-500 text-sm lg:text-base">18 biji</span>
+                        </div>
+                        <ul class="text-xs lg:text-sm text-gray-600 mb-4 lg:mb-6 space-y-1">
+                            <li>✅ 18 potong getuk pisang</li>
+                            <li>✅ Kemasan jumbo</li>
+                            <li>✅ Tahan 5-6 hari</li>
+                        </ul>
+                        <button onclick="orderWhatsApp('Kemasan Besar', 80000, 40)" 
+                                class="w-full bg-banana-green text-white py-2.5 lg:py-3 rounded-full font-semibold hover:bg-green-600 transition-all transform hover:scale-105 text-sm lg:text-base">
+                            🛒 Pesan via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Order Options -->
+            <div class="text-center mt-8 lg:mt-12" data-aos="fade-up">
+                <div class="bg-white rounded-2xl shadow-lg p-6 lg:p-8 max-w-4xl mx-auto">
+                    <h3 class="font-lora text-xl lg:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6">Cara Pemesanan Lainnya</h3>
+                    <div class="grid sm:grid-cols-2 gap-4 lg:gap-6">
+                        <a href="#" class="flex items-center justify-center space-x-3 bg-green-500 text-white py-3 lg:py-4 px-4 lg:px-6 rounded-full hover:bg-green-600 transition-all transform hover:scale-105">
+                           
+                            <span class="font-semibold text-sm lg:text-base">Order via WhatsApp</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-center space-x-3 bg-orange-500 text-white py-3 lg:py-4 px-4 lg:px-6 rounded-full hover:bg-orange-600 transition-all transform hover:scale-105">
+                         
+                            <span class="font-semibold text-sm lg:text-base">Belanja di GoFood</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-12 lg:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 lg:mb-16" data-aos="fade-up">
+                <h2 class="font-lora text-2xl sm:text-3xl lg:text-4xl font-bold text-leaf-brown mb-4 lg:mb-6">Lokasi & Jam Operasional</h2>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4 lg:px-0">
+                    Kunjungi toko kami di Oro-Oro Ombo, Batu atau pesan online untuk pengantaran ke alamat Anda.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <div data-aos="fade-right" class="space-y-6 lg:space-y-8">
+                    <div class="bg-warm-cream rounded-2xl p-6 lg:p-8">
+                        <h3 class="font-lora text-xl lg:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6 flex items-center">
+                            📍 Alamat Toko
+                        </h3>
+                        <div class="space-y-3 lg:space-y-4 text-gray-700 text-sm lg:text-base">
+                            <p class="flex items-start space-x-3">
+                                <span class="text-banana-green mt-1">🏠</span>
+                                <span>Jl. Raya Oro-Oro Ombo No. 123<br>Kecamatan Batu, Kota Batu<br>Jawa Timur 65314</span>
+                            </p>
+                            <p class="flex items-center space-x-3">
+                                <span class="text-banana-green">📱</span>
+                                <span>0812-3396-6883</span>
+                            </p>
+                            <p class="flex items-center space-x-3">
+                                <span class="text-banana-green">📧</span>
+                                <span class="break-all">info@getukpisangsahira.com</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border-2 border-banana-green rounded-2xl p-6 lg:p-8">
+                        <h3 class="font-lora text-xl lg:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6 flex items-center">
+                            🕒 Jam Operasional
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-medium text-sm lg:text-base">Senin - Jumat</span>
+                                <span class="text-banana-green font-semibold text-sm lg:text-base">08:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-medium text-sm lg:text-base">Sabtu - Minggu</span>
+                                <span class="text-banana-green font-semibold text-sm lg:text-base">08:00 - 20:00</span>
+                            </div>
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                    <span class="text-green-700 font-semibold text-sm lg:text-base" id="store-status">Toko sedang buka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" class="space-y-4 lg:space-y-6">
+                    <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0126634700296!2d112.53982107455563!3d-7.8937431785318495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7881b5dea07bdf%3A0x37a554c2d17435d5!2sGetuk%20Pisang%20Sahira!5e0!3m2!1sid!2sid!4v1750706737215!5m2!1sid!2sid"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-64 sm:h-80 lg:h-96 rounded-2xl">
+                            </iframe>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
+                        <button onclick="openGoogleMaps()" class="flex items-center justify-center space-x-2 bg-blue-500 text-white py-3 px-4 rounded-full hover:bg-blue-600 transition-all text-sm lg:text-base">
+                            <span>🗺️</span>
+                            <span class="font-semibold">Buka di Maps</span>
+                        </button>
+                        <button onclick="orderWhatsApp('Info Lokasi', 0, 0)" class="flex items-center justify-center space-x-2 bg-banana-green text-white py-3 px-4 rounded-full hover:bg-green-600 transition-all text-sm lg:text-base">
+                            <span>🗨️</span>
+                            <span class="font-semibold">Tanya Lokasi</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 lg:py-20 bg-gradient-to-br from-warm-cream to-traditional-yellow">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 lg:mb-16" data-aos="fade-up">
+                <h2 class="font-lora text-2xl sm:text-3xl lg:text-4xl font-bold text-leaf-brown mb-4 lg:mb-6">Hubungi Kami</h2>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto px-4 lg:px-0">
+                    Ada pertanyaan atau saran? Jangan ragu untuk menghubungi kami. Kami siap melayani Anda dengan sepenuh hati.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 lg:p-8" data-aos="fade-right">
+                    <h3 class="font-lora text-xl lg:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6">Kirim Pesan</h3>
+                    <form id="contact-form" class="space-y-4 lg:space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-3 lg:px-4 py-2.5 lg:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-banana-green focus:border-transparent transition-all text-sm lg:text-base">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-3 lg:px-4 py-2.5 lg:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-banana-green focus:border-transparent transition-all text-sm lg:text-base">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">No. Telepon</label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="w-full px-3 lg:px-4 py-2.5 lg:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-banana-green focus:border-transparent transition-all text-sm lg:text-base">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="w-full px-3 lg:px-4 py-2.5 lg:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-banana-green focus:border-transparent transition-all text-sm lg:text-base resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-banana-green text-white py-3 lg:py-4 rounded-lg font-semibold hover:bg-green-600 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed text-sm lg:text-base">
+                            <span id="submit-text">📧 Kirim Pesan</span>
+                            <span id="loading-text" class="hidden">⏳ Mengirim...</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-6 lg:space-y-8" data-aos="fade-left">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+                        <h3 class="font-lora text-xl lg:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6">Kontak Cepat</h3>
+                        <div class="space-y-4 lg:space-y-6">
+                            <a href="https://wa.me/081233966883" target="_blank" 
+                               class="flex items-center space-x-4 p-3 lg:p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-all group">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-white text-lg lg:text-xl">🗨️</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-leaf-brown text-sm lg:text-base">WhatsApp</h4>
+                                    <p class="text-gray-600 text-xs lg:text-sm">0812-3396-6883</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://instagram.com/getukpisangsahira" target="_blank" 
+                               class="flex items-center space-x-4 p-3 lg:p-4 bg-pink-50 rounded-lg hover:bg-pink-100 transition-all group">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 bg-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-white text-lg lg:text-xl">📸</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-leaf-brown text-sm lg:text-base">Instagram</h4>
+                                    <p class="text-gray-600 text-xs lg:text-sm">@getukpisangsahira</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://gofood.co.id/malang/restaurant/getuk-pisang-sahira" target="_blank" 
+                               class="flex items-center space-x-4 p-3 lg:p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-all group">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 bg-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-white text-lg lg:text-xl">🛒</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-leaf-brown text-sm lg:text-base">GoFood</h4>
+                                    <p class="text-gray-600 text-xs lg:text-sm">GETUK PISANG SAHIRA</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+                        <h3 class="font-lora text-xl lg:text-2xl font-semibold text-leaf-brown mb-4 lg:mb-6">Info Pengiriman</h3>
+                        <div class="space-y-3 lg:space-y-4 text-gray-700 text-sm lg:text-base">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-banana-green">🚚</span>
+                                <span>Pengiriman dalam kota Batu: Gratis</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-banana-green">📦</span>
+                                <span>Pengiriman luar kota: Via JNE/TIKI</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-banana-green">⏰</span>
+                                <span>Pesanan diproses maksimal 2 jam</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-banana-green">💰</span>
+                                <span>Minimal order: Rp 11.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-leaf-brown text-white py-12 lg:py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Brand -->
+                <div class="sm:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4 lg:mb-6">
+                        <span class="text-2xl lg:text-3xl">🍌</span>
+                        <div>
+                            <h3 class="font-lora text-xl lg:text-2xl font-bold">Getuk Pisang Sahira</h3>
+                            <p class="text-warm-cream text-sm lg:text-base">Manisnya Pisang, Tradisi yang Tak Pernah Padam</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base">
+                        Getuk Pisang Sahira hadir sebagai pilihan terbaik oleh-oleh khas Batu, Malang. 
+                        Dibuat dengan resep turun temurun dan bahan-bahan pilihan terbaik.
+                    </p>
+                    <div class="flex space-x-3 lg:space-x-4">
+                        
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-base lg:text-lg mb-4 lg:mb-6 text-traditional-yellow">Navigasi Cepat</h4>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-traditional-yellow transition-colors text-sm lg:text-base">Beranda</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-traditional-yellow transition-colors text-sm lg:text-base">Tentang</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-traditional-yellow transition-colors text-sm lg:text-base">Produk</a></li>
+                        <li><a href="#location" class="text-gray-300 hover:text-traditional-yellow transition-colors text-sm lg:text-base">Lokasi</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-traditional-yellow transition-colors text-sm lg:text-base">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-base lg:text-lg mb-4 lg:mb-6 text-traditional-yellow">Kontak</h4>
+                    <div class="space-y-2 lg:space-y-3 text-gray-300 text-sm lg:text-base">
+                        <p class="flex items-center space-x-2">
+                            <span>📍</span>
+                            <span>Oro-Oro Ombo, Batu, Malang</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <span>📱</span>
+                            <span>081233966883</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <span>🕒</span>
+                            <span>06:00 - 20:00 WIB</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-gray-600 my-6 lg:my-8">
+            
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+                <p class="text-gray-300 text-xs lg:text-sm text-center sm:text-left">
+                    © 2024 Getuk Pisang Sahira. Semua hak cipta dilindungi.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/081233966883" target="_blank" 
+       class="fixed bottom-4 right-4 lg:bottom-6 lg:right-6 w-12 h-12 lg:w-14 lg:h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-xl lg:text-2xl shadow-lg hover:bg-green-600 transition-all hover:scale-110 animate-bounce z-50">
+        🗨️
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" 
+            class="fixed bottom-4 left-4 lg:bottom-6 lg:left-6 w-10 h-10 lg:w-12 lg:h-12 bg-banana-green rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition-all hover:scale-110 opacity-0 invisible text-sm lg:text-base">
+        ↑
+    </button>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden p-4">
+        <div class="relative max-w-4xl max-h-screen">
+            <img id="modal-image" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+            <button id="close-modal" class="absolute top-2 right-2 lg:top-4 lg:right-4 text-white text-2xl lg:text-3xl hover:text-gray-300 transition-colors bg-black bg-opacity-50 rounded-full w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center">×</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

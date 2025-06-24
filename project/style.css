@@ -1,0 +1,442 @@
+/* Custom Styles for Getuk Pisang Sahira */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8BC34A;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #689F38;
+}
+
+/* Navigation active state */
+.nav-link.active {
+    color: #8BC34A !important;
+    font-weight: 600;
+}
+
+/* Product card hover effects */
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(139, 195, 74, 0.1),
+        transparent
+    );
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.product-card:hover::before {
+    left: 100%;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Loading spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Form validation styles */
+.input-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.input-success {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Hero section background pattern */
+#home {
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(139, 195, 74, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 235, 59, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(121, 85, 72, 0.05) 0%, transparent 50%);
+}
+
+/* Parallax effect for hero */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Custom button styles */
+.btn-primary {
+    background: linear-gradient(135deg, #8BC34A 0%, #689F38 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #689F38 0%, #558B2F 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 195, 74, 0.3);
+}
+
+/* Gallery image hover effects */
+.gallery-image {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Store status indicator */
+.store-open {
+    color: #10b981 !important;
+}
+
+.store-closed {
+    color: #ef4444 !important;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.show {
+    max-height: 400px;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+    /* Ensure text is readable on mobile */
+    .hero-title {
+        font-size: 1.875rem !important; /* 30px */
+        line-height: 1.2 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important; /* 16px */
+        line-height: 1.5 !important;
+    }
+    
+    /* Better spacing for mobile */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Improve button sizes on mobile */
+    .mobile-btn {
+        min-height: 44px; /* iOS recommended touch target */
+        font-size: 0.875rem;
+    }
+    
+    /* Better form inputs on mobile */
+    input, textarea, select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+    
+    /* Improve card spacing on mobile */
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Better navigation on mobile */
+    .nav-link {
+        padding: 0.75rem 1rem;
+        display: block;
+        border-bottom: 1px solid #f3f4f6;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Tablet improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem !important; /* 40px */
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem !important; /* 18px */
+    }
+}
+
+/* Improved responsive grid for products */
+@media (max-width: 640px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Better image handling on mobile */
+@media (max-width: 640px) {
+    .gallery-image {
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .hero-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+/* Improved footer on mobile */
+@media (max-width: 640px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        grid-column: 1;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dark mode styles (optional) */
+@media (prefers-color-scheme: dark) {
+    .dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .dark-mode .bg-white {
+        background-color: #2d2d2d !important;
+        color: #ffffff !important;
+    }
+    
+    .dark-mode .text-gray-700 {
+        color: #d1d5db !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .fixed {
+        display: none !important;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Accessibility improvements */
+.focus-visible:focus {
+    outline: 2px solid #8BC34A;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .bg-banana-green {
+        background-color: #2E7D0F !important;
+    }
+    
+    .text-banana-green {
+        color: #2E7D0F !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Success and error states */
+.success-message {
+    background-color: #d1fae5;
+    border: 1px solid #10b981;
+    color: #047857;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+}
+
+/* Image lazy loading placeholder */
+.img-placeholder {
+    background: linear-gradient(45deg, #f3f4f6 25%, transparent 25%), 
+                linear-gradient(-45deg, #f3f4f6 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #f3f4f6 75%), 
+                linear-gradient(-45deg, transparent 75%, #f3f4f6 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    100% {
+        background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px;
+    }
+}
+
+/* Improved mobile touch targets */
+@media (max-width: 640px) {
+    button, .btn, a[role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Better spacing for mobile cards */
+    .card {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    
+    /* Improved mobile typography */
+    h1 { font-size: 1.875rem; line-height: 1.2; }
+    h2 { font-size: 1.5rem; line-height: 1.3; }
+    h3 { font-size: 1.25rem; line-height: 1.4; }
+    
+    p, li {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+    
+    /* Better mobile navigation */
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Landscape mobile improvements */
+@media (max-width: 896px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+        padding-top: 4rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 0;
+    }
+}
+
+/* Very small screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.875rem !important;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
