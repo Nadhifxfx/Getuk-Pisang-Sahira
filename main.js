@@ -1,14 +1,7 @@
 // Main JavaScript for Getuk Pisang Sahira Website
 
-// Initialize AOS (Animate On Scroll)
+// Initialize components
 document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-    });
-    
     // Initialize all components
     initNavigation();
     initMobileMenu();
